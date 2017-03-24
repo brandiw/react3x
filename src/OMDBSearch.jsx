@@ -11,7 +11,7 @@ class OMDBSearch extends Component{
   }
   search(e){
     e.preventDefault();
-    const url = 'http://omdbapi.com/?s=' + this.state.searchTerm;
+    const url = 'https://omdbapi.com/?s=' + this.state.searchTerm;
     fetch(url).then(response => {
         response.json().then(data => {
           this.setState({ results: data.Search });
